@@ -1,0 +1,33 @@
+a = 10              # Integer variable
+a = 3
+a = -8
+
+a = 6.7             # Float variable
+a = 7.5
+
+a = 8j              # Complex variable
+
+a = True            # Boolean variable
+a = False
+
+a = "Hello World"   # String variable
+a = 'Hello World'
+
+
+
+# List
+lst = [1, 2, 3]
+
+# Tuple
+tp1 = 3, 4, 5
+tp2 = (6, 7, 8)
+
+# Set
+st0 = {1, 3, 5}
+
+# Dictonary
+dct = {
+    'key1' : 'value1',
+    'key2' : 2,
+    3 : 'Yo'
+}

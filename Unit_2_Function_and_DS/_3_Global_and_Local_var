@@ -1,0 +1,42 @@
+a = 7
+
+def foo1():
+    a = 5
+    print(f'a in foo1: {a}')
+
+foo1()
+print(f'a in global scope: {a}')
+
+
+def foo2(a):
+    print(f'a in foo2: {a}')
+    a = 8
+    print(f'a in foo2 after assignment: {a}')
+
+foo2(a)
+print(f'a in global scope after foo2: {a}')
+
+
+def foo3():
+    global a
+    print(f'a in foo3 before assignment: {a}')
+    a = 10
+    print(f'a in foo3 after assignment: {a}')
+
+foo3()
+print(f'a in global scope after foo3: {a}')
+
+
+
+######################################################################################
+'''
+Output:
+a in foo1: 5
+a in global scope: 7
+a in foo2: 7
+a in foo2 after assignment: 8
+a in global scope after foo2: 7
+a in foo3 before assignment: 7
+a in foo3 after assignment: 10
+a in global scope after foo3: 10
+'''

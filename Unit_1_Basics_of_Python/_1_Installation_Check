@@ -1,0 +1,13 @@
+import sys
+
+print("Python is installed.")
+print("Python Version:", sys.version)
+
+
+
+##################################################################################
+'''
+Output:
+Python is installed.
+Python Version: 3.13.3 (tags/v3.13.3:xxxxffx, Apr  8 2025, 14:47:33) [MSC v.xxxx 64 bit (AMD64)]
+'''

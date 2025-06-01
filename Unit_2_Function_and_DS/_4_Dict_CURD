@@ -1,0 +1,42 @@
+# Create
+my_dict = {}
+my_dict["new_key"] = "new_value"
+print(my_dict)
+
+
+# Read
+my_dict = {"key1": "value1", "key2": "value2"}
+value = my_dict["key1"]
+print(value)
+
+value = my_dict.get("key3", "default_value")
+print(value)
+
+
+# Update
+my_dict["key1"] = "new_value1"
+print(my_dict)
+
+
+# Delete
+my_dict = {"key1": "value1", "key2": "value2"}
+del my_dict["key1"]
+print(my_dict)
+
+value = my_dict.pop("key2")
+print(my_dict)
+print(value)
+
+
+
+########################################################################################
+'''
+Output:
+{'new_key': 'new_value'}
+value1
+default_value
+{'key1': 'new_value1', 'key2': 'value2'}
+{'key2': 'value2'}
+{}
+value2
+'''
