@@ -1,0 +1,27 @@
+# Create a sample text file
+with open("sample2.txt", "w") as f:
+    f.write("This is the first line.\n")
+    f.write("This is the second line.\n")
+
+# Append to the file
+with open("sample2.txt", 'a') as f:
+    f.write("This is the appended line.\n")
+
+# Reads the output
+with open('sample2.txt', 'r') as f:
+    content = f.read()
+    print("Content of the file after appending:")
+    print(content)
+
+
+
+
+########################################################################################
+'''
+output:
+Content of the file after appending:
+This is the first line.
+This is the second line.
+This is the appended line.
+
+'''

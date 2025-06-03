@@ -1,0 +1,42 @@
+# Using read()
+with open("sample.txt", "r") as f:
+    content = f.read()
+    print("Using read():")
+    print(content)
+    
+# Using readline()
+with open("sample.txt", "r") as f:
+    print("\nUsing readline():")
+    line = f.readline()
+    while line:
+        print(line.strip())         # Strip removes leading/trailing whitespace or \n
+        line = f.readline()
+
+# Using readlines()
+with open("sample.txt", "r") as f:
+    lines = f.readlines()
+    print("\nUsing readlines():")
+    for line in lines:
+        print(line.strip())
+
+
+
+########################################################################################
+'''
+Output:
+Using read():
+This is the first line.
+This is the second line.
+This is the third line.
+
+
+Using readline():
+This is the first line.
+This is the second line.
+This is the third line.
+
+Using readlines():
+This is the first line.
+This is the second line.
+This is the third line.
+'''

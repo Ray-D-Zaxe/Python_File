@@ -1,0 +1,25 @@
+# This is a class
+class Classy:
+    # This is a constructor
+    def __init__(self, name, a, b):
+        self.name = name
+        self.a = a
+        self.b = b
+    
+    def display(self):
+        print(f'Class name : {self.name}')
+        print(f'a + b => {self.a} + {self.b} = {self.a + self.b}')
+
+# Create an object of the class
+obj = Classy("Classy Object", 10, 20)
+# Call the display method
+obj.display()
+
+
+
+########################################################################################
+'''
+output:
+Class name : Classy Object
+a + b => 10 + 20 = 30
+'''

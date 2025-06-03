@@ -1,0 +1,30 @@
+class A:
+    def apr():
+        print("A's method")
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+
+siobj = B
+miobj = C
+
+
+print("Single Inheritence:")
+B.apr()
+print("Multi-level Inheritence:")
+C.apr()
+
+
+
+########################################################################################
+'''
+output:
+Single Inheritence:
+A's method
+Multi-level Inheritence:
+A's method
+'''
