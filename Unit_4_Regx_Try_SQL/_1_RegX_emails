@@ -1,0 +1,17 @@
+import re
+
+email = input("Enter an email address: ")
+valid = re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email)
+
+print("Valid email address." if valid else "Invalid email address.")
+
+
+
+########################################################################################
+'''
+output:
+Enter an email address: abc@xyz.pqr 
+Valid email address.
+Enter an email address: asd8763@sdff
+Invalid email address.
+'''

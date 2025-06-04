@@ -1,0 +1,52 @@
+# Define a custom exception for invalid age
+class InvalidAgeError(Exception):
+    """Custom exception raised when an invalid age is provided."""
+    def __init__(self, age, message="Age must be a positive integer within a reasonable range."):
+        self.age = age
+        self.message = message
+
+    def __str__(self):
+        return f"Invalid Age: {self.age}. {self.message}"
+
+# Function to validate age
+def validate_age(age):
+    """
+    Validates the provided age.
+    Raises InvalidAgeError if the age is invalid.
+    """
+    if not isinstance(age, int):
+        raise InvalidAgeError(age, "Age must be an integer.")
+    if age <= 0 or age > 120:  # Assuming a reasonable age range
+        raise InvalidAgeError(age, "Age must be between 1 and 120.")
+    print(f"Age {age} is valid.")
+
+# Example usage with try-except block
+if __name__ == "__main__":
+    ages_to_test = [25, -5, 0, 150, "abc", 75]
+
+    for age in ages_to_test:
+        try:
+            validate_age(age)
+        except InvalidAgeError as e:
+            print(e)
+        except Exception as e: # Catch other potential errors, e.g., if input() was used
+            print(f"An unexpected error occurred: {e}")
+        print("-" * 20)
+
+
+
+########################################################################################
+'''
+output:
+--------------------
+Invalid Age: -5. Age must be between 1 and 120.
+--------------------
+Invalid Age: 0. Age must be between 1 and 120.
+--------------------
+Invalid Age: 150. Age must be between 1 and 120.
+--------------------
+Invalid Age: abc. Age must be an integer.
+--------------------
+Age 75 is valid.
+--------------------
+'''
